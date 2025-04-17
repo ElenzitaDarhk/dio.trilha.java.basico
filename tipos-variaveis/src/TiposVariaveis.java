@@ -9,12 +9,16 @@ public class TiposVariaveis {
 
         Pessoa pessoa = new Pessoa("Elen Cristina Pinheiro",
                 "Elenzita Darhk",
-                37,
+                34,
                 159.5,
                 67.45,
                 'F',
                 false,
                 new Date(1987, 8, 29));
+
+        out.println(pessoa.toString());
+
+        pessoa.atualizarIdade();
 
         out.println(pessoa.toString());
     }

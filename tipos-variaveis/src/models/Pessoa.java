@@ -1,6 +1,8 @@
 package models;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Pessoa {
 
@@ -57,20 +59,6 @@ public class Pessoa {
         this.altura = altura;
     }
 
-    public String toString() {
-        String pesString = "Dados Principais: ";
-        pesString = pesString.concat("\nNome Completo: ");
-        pesString = pesString.concat(nomeCompleto);
-        pesString = pesString.concat("\nApelido: ");
-        pesString = pesString.concat(apelido);
-        pesString = pesString.concat("\nIdade: ");
-        pesString = pesString.concat(String.valueOf(idade));
-        pesString = pesString.concat("\nAltura: ");
-        pesString = pesString.concat(String.valueOf(altura));
-
-        return pesString;
-    }
-
     public double getPeso() {
         return peso;
     }
@@ -103,4 +91,40 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
+    public String toString() {
+        String pesString = "Dados Principais: ";
+        pesString = pesString.concat("\nNome Completo: ");
+        pesString = pesString.concat(nomeCompleto);
+        pesString = pesString.concat("\nApelido: ");
+        pesString = pesString.concat(apelido);
+        pesString = pesString.concat("\nIdade: ");
+        pesString = pesString.concat(String.valueOf(idade));
+        pesString = pesString.concat("\nAltura: ");
+        pesString = pesString.concat(String.valueOf(altura));
+
+        return pesString;
+    }
+
+    public void atualizarIdade() {
+
+        Date dataAtual = new Date();
+        Calendar calendar = new GregorianCalendar();
+        calendar.setTime(dataAtual);
+        int anoAtual = calendar.get(Calendar.YEAR);
+        int mesAtual = calendar.get(Calendar.MONTH) + 1;
+        int diaAtual = calendar.get(Calendar.DAY_OF_MONTH);
+
+        if ((anoAtual - dataNascimento.getYear()) != idade) {
+
+            if (mesAtual > dataNascimento.getMonth()) {
+                idade = (anoAtual - dataNascimento.getYear());
+            } else if (mesAtual == dataNascimento.getMonth()) {
+                if (diaAtual >= dataNascimento.getDay()) {
+                    idade = (anoAtual - dataNascimento.getYear());
+                }
+            } else {
+                idade = (anoAtual - dataNascimento.getYear()) - 1;
+            }
+        }
+    }
 }
