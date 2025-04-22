@@ -40,5 +40,14 @@ public class Usuario {
         System.out.println("TV Ligada? " + (smartTv.verificarLigada() ? "Ligada" : "Desligada"));
         System.out.println("Canal: " + smartTv.getCanal());
         System.out.println("Volume: " + smartTv.getVolume());
+
+        System.out.println("Canal via argumento");
+
+        int canal = Integer.valueOf(args[0]);
+        smartTv.escolherCanal(15);
+
+        System.out.println("TV Ligada? " + (smartTv.verificarLigada() ? "Ligada" : "Desligada"));
+        System.out.println("Canal: " + smartTv.getCanal());
+        System.out.println("Volume: " + smartTv.getVolume());
     }
 }
