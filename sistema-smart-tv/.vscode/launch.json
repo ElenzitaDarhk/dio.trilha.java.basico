@@ -15,7 +15,8 @@
             "name": "Usuario",
             "request": "launch",
             "mainClass": "Usuario",
-            "projectName": "sistema-smart-tv_103bee4e"
+            "projectName": "sistema-smart-tv_103bee4e",
+            "args": ["80"]
         }
     ]
 }
