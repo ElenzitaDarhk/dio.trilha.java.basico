@@ -43,8 +43,18 @@ public class Usuario {
 
         System.out.println("Canal via argumento");
 
-        int canal = Integer.valueOf(args[0]);
-        smartTv.escolherCanal(15);
+        String argumento = "";
+        int canal = 5;
+
+        if (args != null && args.length > 0) {
+            argumento = args[0];
+        }
+
+        if (!argumento.isEmpty()) {
+            canal = Integer.valueOf(argumento);
+        }
+
+        smartTv.escolherCanal(canal);
 
         System.out.println("TV Ligada? " + (smartTv.verificarLigada() ? "Ligada" : "Desligada"));
         System.out.println("Canal: " + smartTv.getCanal());
