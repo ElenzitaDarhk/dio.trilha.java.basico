@@ -7,9 +7,9 @@
 
         {
             "type": "java",
-            "name": "Current File",
+            "name": "ContaBanco",
             "request": "launch",
-            "mainClass": "//ContaBanco.java"
+            "mainClass": "ContaBanco"
         },
         {
             "type": "java",
