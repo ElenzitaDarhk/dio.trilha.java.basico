@@ -4,20 +4,20 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+
         {
             "type": "java",
-            "name": "Usuario.java",
+            "name": "Current File",
             "request": "launch",
-            "mainClass": "Usuario"
+            "mainClass": "App",
+            "projectName": "HandsOnDebug_b17af5cd"
         },
         {
             "type": "java",
-            "name": "Usuario",
+            "name": "App",
             "request": "launch",
-            "mainClass": "Usuario",
-            "projectName": "sistema-smart-tv_103bee4e",
-            "args": ["80"]
+            "mainClass": "App",
+            "projectName": "HandsOnDebug_b17af5cd"
         }
     ]
 }
