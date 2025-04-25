@@ -1,6 +1,6 @@
 ## Visão Geral
 
-Exercício prático do conteúdo apresentado no módulo de Sintaxe
+Exercício prático do conteúdo apresentado no módulo Controle de Fluxo.
 
 ## Estrutura de Diretórios
 
